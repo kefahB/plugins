@@ -1,0 +1,8 @@
+android { 
+
+}
+
+dependencies {
+	def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '+'
+	compile "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+}

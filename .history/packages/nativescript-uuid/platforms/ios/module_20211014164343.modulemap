@@ -1,0 +1,4 @@
+module SAMKeychain {
+    umbrella "../Pods/SAMKeychain/Sources"
+    export *
+}

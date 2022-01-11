@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+xmlns:lm="@kefah/nativescript-google-maps" navigatingTo="navigatingTo"  loaded="pageLoaded" class="page">
+    <Page.actionBar>
+        <ActionBar title="nativescript-google-maps" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout>
+        <lm:GoogleMaps
+        latitude="{{ latitude }}" longitude="{{ longitude }}"
+			zoom="{{ zoom }}" minZoom="{{ minZoom }}" maxZoom="{{ maxZoom }}"
+			tilt="{{ tilt }}" bearing="{{ bearing }}"
+			mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
+			i-padding="50,50,50,50" padding="{{ padding }}"
+			mapReady="onMapReady"
+			coordinateTapped="onCoordinateTapped"
+			markerSelect="onMarkerEvent"
+			markerBeginDragging="onMarkerEvent" markerEndDragging="onMarkerEvent" markerDrag="onMarkerEvent"
+			markerInfoWindowTapped="onMarkerEvent" markerInfoWindowClosed="onMarkerEvent"
+			cameraChanged="onCameraChanged"
+			cameraMove="onCameraMove"
+			indoorBuildingFocused="onIndoorBuildingFocused"
+			indoorLevelActivated="onIndoorLevelActivated">
+            <lm:GoogleMaps.infoWindowTemplate>
+                <StackLayout orientation="vertical" width="200" >
+                    <Label text="{{title}}" className="title" width="125"   />
+                    <Label text="{{snippet}}" className="snippet" width="125"   />
+                    <Label text="{{'LAT: ' + position.latitude}}" className="infoWindowCoordinates"  />
+                    <Label text="{{'LON: ' + position.longitude}}" className="infoWindowCoordinates"  />
+                </StackLayout>
+            </lm:GoogleMaps.infoWindowTemplate>
+        </lm:GoogleMaps>
+    </GridLayout>
+</Page>

@@ -1,0 +1,10 @@
+import { NativescriptUuidCommon } from './common';
+import { NativescriptUuid } from './index.ios';
+
+export * from './index.ios';
+export * from './index.android';
+
+module.exports = {
+    NativescriptUuid: NativescriptUuid,
+    getUUID: NativescriptUuid.getUUID()
+}

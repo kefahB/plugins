@@ -1,0 +1,5 @@
+
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Need location when in use.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Need location always.</string>

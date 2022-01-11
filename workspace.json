@@ -1,0 +1,202 @@
+{
+  "version": 2,
+  "projects": {
+    "all": {
+      "root": "",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:run-commands",
+          "outputs": [
+            "dist/packages"
+          ],
+          "options": {
+            "commands": [
+              "nx run nativescript-uuid:build.all",
+              "nx run nativescript-google-maps:build.all"
+            ],
+            "parallel": false
+          }
+        },
+        "focus": {
+          "outputs": [
+            "dist/packages"
+          ],
+          "options": {
+            "commands": [
+              "nx g @nativescript/plugin-tools:focus-packages"
+            ],
+            "parallel": false
+          },
+          "executor": "@nrwl/workspace:run-commands"
+        }
+      },
+      "sourceRoot": ""
+    },
+    "demo": {
+      "root": "apps/demo/",
+      "sourceRoot": "apps/demo/src",
+      "projectType": "application",
+      "prefix": "demo",
+      "targets": {
+        "build": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "noHmr": true,
+            "production": true,
+            "uglify": true,
+            "release": true,
+            "forDevice": true
+          }
+        },
+        "ios": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "platform": "ios"
+          }
+        },
+        "android": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "platform": "android"
+          }
+        },
+        "clean": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "clean": true
+          }
+        }
+      }
+    },
+    "demo-angular": {
+      "root": "apps/demo-angular/",
+      "sourceRoot": "apps/demo-angular/src",
+      "projectType": "application",
+      "prefix": "demo",
+      "targets": {
+        "build": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "noHmr": true,
+            "production": true,
+            "uglify": true,
+            "release": true,
+            "forDevice": true
+          }
+        },
+        "ios": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "platform": "ios"
+          }
+        },
+        "android": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "platform": "android"
+          }
+        },
+        "clean": {
+          "executor": "@nativescript/nx:build",
+          "options": {
+            "clean": true
+          }
+        }
+      }
+    },
+    "nativescript-uuid": {
+      "root": "packages/nativescript-uuid",
+      "projectType": "library",
+      "sourceRoot": "packages/nativescript-uuid",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/nativescript-uuid",
+            "tsConfig": "packages/nativescript-uuid/tsconfig.json",
+            "packageJson": "packages/nativescript-uuid/package.json",
+            "main": "packages/nativescript-uuid/index.d.ts",
+            "assets": [
+              "packages/nativescript-uuid/*.md",
+              "packages/nativescript-uuid/index.d.ts",
+              "LICENSE",
+              {
+                "glob": "**/*",
+                "input": "packages/nativescript-uuid/platforms/",
+                "output": "./platforms/"
+              }
+            ]
+          }
+        },
+        "build.all": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx run nativescript-uuid:build",
+              "node tools/scripts/build-finish.ts nativescript-uuid"
+            ],
+            "parallel": false
+          }
+        },
+        "focus": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx g @nativescript/plugin-tools:focus-packages nativescript-uuid"
+            ],
+            "parallel": false
+          }
+        }
+      }
+    },
+    "nativescript-google-maps": {
+      "root": "packages/nativescript-google-maps",
+      "projectType": "library",
+      "sourceRoot": "packages/nativescript-google-maps",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/nativescript-google-maps",
+            "tsConfig": "packages/nativescript-google-maps/tsconfig.json",
+            "packageJson": "packages/nativescript-google-maps/package.json",
+            "main": "packages/nativescript-google-maps/index.d.ts",
+            "assets": [
+              "packages/nativescript-google-maps/*.md",
+              "packages/nativescript-google-maps/index.d.ts",
+              "LICENSE",
+              {
+                "glob": "**/*",
+                "input": "packages/nativescript-google-maps/platforms/",
+                "output": "./platforms/"
+              }
+            ]
+          }
+        },
+        "build.all": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx run nativescript-google-maps:build",
+              "node tools/scripts/build-finish.ts nativescript-google-maps"
+            ],
+            "parallel": false
+          }
+        },
+        "focus": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx g @nativescript/plugin-tools:focus-packages nativescript-google-maps"
+            ],
+            "parallel": false
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}

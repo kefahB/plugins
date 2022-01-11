@@ -1,0 +1,15 @@
+{
+  "main": "./src/app.ts",
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "@kefah/nativescript-google-maps": "file:../../packages/nativescript-google-maps",
+    "@nativescript/core": "file:../../node_modules/@nativescript/core",
+    "nativescript-permissions": "^1.3.12"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.1.1",
+    "@nativescript/ios": "~8.1.0"
+  }
+}

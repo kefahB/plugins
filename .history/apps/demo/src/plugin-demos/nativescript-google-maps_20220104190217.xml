@@ -1,0 +1,26 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+xmlns:lm="@kefah/nativescript-google-maps" navigatingTo="navigatingTo"  loaded="pageLoaded" class="page">
+    <Page.actionBar>
+        <ActionBar title="nativescript-google-maps" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout>
+        <lm:GoogleMaps
+			latitude="{{ latitude }}" longitude="{{ longitude }}"
+			zoom="{{ zoom }}" minZoom="{{ minZoom }}" maxZoom="{{ maxZoom }}"
+			tilt="{{ tilt }}" bearing="{{ bearing }}"
+			mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
+			i-padding="50,50,50,50" padding="{{ padding }}"
+			mapReady="onMapReady"
+			coordinateTapped="onCoordinateTapped"
+			markerSelect="onMarkerEvent"
+			markerBeginDragging="onMarkerEvent" markerEndDragging="onMarkerEvent" markerDrag="onMarkerEvent"
+			markerInfoWindowTapped="onMarkerEvent" markerInfoWindowClosed="onMarkerEvent"
+			cameraChanged="onCameraChanged"
+			cameraMove="onCameraMove"
+			indoorBuildingFocused="onIndoorBuildingFocused"
+			indoorLevelActivated="onIndoorLevelActivated"
+		>
+        </lm:GoogleMaps>
+    </GridLayout>
+</Page>
