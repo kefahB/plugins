@@ -1,0 +1,11 @@
+{
+  "main": "./src/main.ts",
+  "dependencies": {
+    "@kefah/nativescript-google-maps": "file:../../dist/packages/nativescript-google-maps",
+    "@nativescript/core": "file:../../node_modules/@nativescript/core"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.2.2",
+    "@nativescript/ios": "~8.2.1"
+  }
+}

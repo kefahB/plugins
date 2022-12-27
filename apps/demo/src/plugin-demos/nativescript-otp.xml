@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+xmlns:notp="@kefah/nativescript-otp" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="otp" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout class="p-20">
+        <ScrollView class="h-full">
+          <StackLayout>
+            <Button text="Test otp >" tap="{{ testIt }}" class="btn btn-primary"/>
+            <notp:NativescriptOtp hint="OTP" class="otp" text="{{ otp }}"/>
+          </StackLayout> 
+        </ScrollView>
+    </StackLayout>
+</Page>

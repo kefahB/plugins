@@ -77,6 +77,27 @@ module.exports = {
 					description: '@kefah/nativescript-google-maps: Build',
 				},
 			},
+			// @kefah/autocomplete
+			'autocomplete': {
+				build: {
+					script: 'nx run autocomplete:build.all',
+					description: '@kefah/autocomplete: Build',
+				},
+			},
+			// @kefah/switcher
+			'switcher': {
+				build: {
+					script: 'nx run switcher:build.all',
+					description: '@kefah/switcher: Build',
+				},
+			},
+			// @kefah/otp
+			'nativescript-otp': {
+				build: {
+					script: 'nx run nativescript-otp:build.all',
+					description: '@kefah/nativescript-otp: Build',
+				},
+			},
 			'build-all': {
         script: 'nx run all:build',
         description: 'Build all packages',
@@ -94,6 +115,18 @@ module.exports = {
       'nativescript-google-maps': {
 				script: 'nx run nativescript-google-maps:focus',
 				description: 'Focus on @kefah/nativescript-google-maps',
+			},
+			'autocomplete': {
+				script: 'nx run autocomplete:focus',
+				description: 'Focus on @kefah/autocomplete',
+			},
+			'switcher': {
+				script: 'nx run switcher:focus',
+				description: 'Focus on @kefah/switcher',
+			},
+			'nativescript-otp': {
+				script: 'nx run nativescript-otp:focus',
+				description: 'Focus on @kefah/nativescript-otp',
 			},
 			reset: {
         script: 'nx run all:focus',

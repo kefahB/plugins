@@ -1,0 +1,13 @@
+android { 
+    compileSdkVersion 31
+
+    defaultConfig {
+        targetSdkVersion 31
+    }
+}
+
+dependencies {
+	//def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '+'
+	def googlePlayServicesVersion = "18.0.2"
+	implementation "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+}

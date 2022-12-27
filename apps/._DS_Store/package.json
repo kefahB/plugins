@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@kefah/nativescript-otp": "file:../../packages/nativescript-otp"
+  }
+}

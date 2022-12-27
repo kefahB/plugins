@@ -1,2 +1,12 @@
 @import 'nativescript-theme-core/scss/light';
 @import 'nativescript-theme-core/scss/index';
+
+
+.otp {
+    padding-left: 15;
+    color: green; 
+    border-width: 1;
+    height: 40;
+    border-radius: 10;
+    placeholder-color: rgb(132, 132, 132);
+}

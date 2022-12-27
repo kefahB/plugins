@@ -13,25 +13,28 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {
-    "all": {
-      "tags": []
-    },
-    "demo": {
-      "tags": []
-    },
-    "demo-angular": {
-      "tags": []
-    },
-    "nativescript-uuid": {
-      "tags": []
-    },
-    "nativescript-google-maps": {
-      "tags": []
-    }
-  },
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "packages"
-  }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "build.all",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "runtimeCacheInputs": [
+          "node -v"
+        ],
+        "parallel": 1,
+        "useDaemonProcess": false
+      }
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }

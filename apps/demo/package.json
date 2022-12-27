@@ -4,12 +4,24 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
-    "@kefah/nativescript-google-maps": "file:../../packages/nativescript-google-maps",
+    "@kefah/nativescript-otp": "file:../../packages/nativescript-otp",
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
     "nativescript-permissions": "^1.3.12"
   },
   "devDependencies": {
     "@nativescript/android": "~8.1.1",
-    "@nativescript/ios": "~8.1.0"
+    "@nativescript/ios": "8.4.0"
+  },
+  "keywords": [
+    "OTP",
+   "NativeScript",
+   "NativeScript OTP",
+   "One Time Code",
+   "Android",
+   "IOS"
+  ],
+  "author": {
+    "name": "KefahB",
+    "email": "kefah.bader@gmail.com"
   }
 }

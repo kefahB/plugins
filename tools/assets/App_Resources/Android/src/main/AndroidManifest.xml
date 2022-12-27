@@ -25,12 +25,13 @@
 		android:icon="@drawable/icon"
 		android:label="@string/app_name"
 		android:theme="@style/AppTheme">
-
+        
 		<activity
 			android:name="com.tns.NativeScriptActivity"
 			android:label="@string/title_activity_kimera"
 			android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|locale|uiMode"
-			android:theme="@style/LaunchScreenTheme">
+			android:theme="@style/LaunchScreenTheme"
+            android:exported="true">
 
 			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme" />
 
@@ -39,6 +40,15 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+
+        <!--<service android:enabled="true" android:name="com.tns.otp.NativescriptOtpService" />-->
+        <!--<receiver android:name="com.tns.otp.MySMSBroadcastReceiver" android:exported="true"
+                android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>-->
+        
 		<activity android:name="com.tns.ErrorReportActivity"/>
 
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/nativescript_google_maps_api_key" />

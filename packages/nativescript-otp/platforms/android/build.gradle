@@ -1,0 +1,15 @@
+android.useAndroidX = true
+android.enableJetifier = true
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

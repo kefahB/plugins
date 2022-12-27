@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   demos = [
 	{
-		name: 'nativescript-google-maps'
+		name: 'otp'
 	}
 ];
 }

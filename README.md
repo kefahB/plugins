@@ -1,5 +1,8 @@
+- [@kefah/autocomplete](packages/autocomplete/README.md)
 - [@kefah/nativescript-google-maps](packages/nativescript-google-maps/README.md)
 - [@kefah/nativescript-uuid](packages/nativescript-uuid/README.md)
+- [@kefah/nativescript-otp](packages/nativescript-otp/README.md)
+- [@kefah/switcher](packages/switcher/README.md)
 
 # How to use?
 
