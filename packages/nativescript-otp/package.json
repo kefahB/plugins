@@ -1,7 +1,7 @@
 {
     "name": "@kefah/nativescript-otp",
-    "version": "1.0.0",
-    "description": "Add a plugin description",
+    "version": "1.0.1",
+    "description": "A Nativescript plugin to auto fill the One Time Code `OTP` for `IOS` and `Android`",
     "main": "index",
     "typings": "index.d.ts",
     "nativescript": {
@@ -15,6 +15,13 @@
         "url": "https://github.com/NativeScript/plugins.git"
     },
     "keywords": [
+        "Google Maps",
+        "OTP",
+        "NativeScript",
+        "NativeScript OTP",
+        "One Time Code",
+        "Android",
+        "IOS",
         "NativeScript",
         "JavaScript",
         "TypeScript",

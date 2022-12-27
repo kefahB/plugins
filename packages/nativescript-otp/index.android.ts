@@ -5,7 +5,6 @@ const SmsRetriever = com.google.android.gms.auth.api.phone.SmsRetriever;
 const phone = com.google.android.gms.auth.api.phone;
 
 @NativeClass()
-@JavaProxy("com.tns.otp.MySMSBroadcastReceiver")
 export class MySMSBroadcastReceiver extends android.content.BroadcastReceiver {
 
     public onReceive(context: android.content.Context, intent: android.content.Intent): void {
