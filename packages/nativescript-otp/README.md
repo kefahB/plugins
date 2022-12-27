@@ -2,9 +2,9 @@
 
 _Social buttons_
 
-[![@kefahB - @kefah/nativescript-otp](https://img.shields.io/static/v1?label=%40kefahB&message=%40kefah%2Fnativescript-otp&color=blue&logo=github)](https://github.com/kefahB/@kefah/nativescript-otp "Go to GitHub repo")
-[![stars - @kefah/nativescript-otp](https://img.shields.io/github/stars/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/@kefah/nativescript-otp)
-[![forks - @kefah/nativescript-otp](https://img.shields.io/github/forks/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/@kefah/nativescript-otp)
+[![@kefahB - @kefah/nativescript-otp](https://img.shields.io/static/v1?label=%40kefahB&message=%40kefah%2Fnativescript-otp&color=blue&logo=github)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md "Go to GitHub repo")
+[![stars - @kefah/nativescript-otp](https://img.shields.io/github/stars/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md)
+[![forks - @kefah/nativescript-otp](https://img.shields.io/github/forks/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md)
 [![dependency - @kefah/nativescript-otp](https://img.shields.io/badge/dependency-%40kefah%2Fnativescript--otp-blue?logo=Nativescript&logoColor=white)](https://www.npmjs.com/package/@kefah/nativescript-otp)
 [![Package - @kefah/nativescript-otp](https://img.shields.io/github/package-json/dependency-version/@kefahB/@kefah/nativescript-otp/@kefah/nativescript-otp?logo=Nativescript&logoColor=white&color=blue)](https://www.npmjs.com/package/@kefah/nativescript-otp)
 
@@ -12,9 +12,9 @@ _Social buttons_
 _Repo metadata_
 
 
-[![GitHub tag](https://img.shields.io/github/tag/kefahB/@kefah/nativescript-otp?include_prereleases=&sort=semver&color=blue)](https://github.com/kefahB/@kefah/nativescript-otp/releases/)
+[![GitHub tag](https://img.shields.io/github/tag/kefahB/@kefah/nativescript-otp?include_prereleases=&sort=semver&color=blue)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![issues - @kefah/nativescript-otp](https://img.shields.io/github/issues/@kefahB/@kefah/nativescript-otp)](https://github.com/kefahB/@kefah/nativescript-otp/issues)
+[![issues - @kefah/nativescript-otp](https://img.shields.io/github/issues/@kefahB/@kefah/nativescript-otp)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md/issues)
 
 ### A Nativescript plugin to auto fill the One Time Code `OTP` for `IOS` and `Android`
 
