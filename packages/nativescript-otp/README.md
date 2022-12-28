@@ -2,18 +2,14 @@
 
 _Social buttons_
 
-[![@kefahB - @kefah/nativescript-otp](https://img.shields.io/static/v1?label=%40kefahB&message=%40kefah%2Fnativescript-otp&color=blue&logo=github)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md "Go to GitHub repo")
-[![stars - @kefah/nativescript-otp](https://img.shields.io/github/stars/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md)
-[![forks - @kefah/nativescript-otp](https://img.shields.io/github/forks/@kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md)
-[![dependency - @kefah/nativescript-otp](https://img.shields.io/badge/dependency-%40kefah%2Fnativescript--otp-blue?logo=Nativescript&logoColor=white)](https://www.npmjs.com/package/@kefah/nativescript-otp)
+[![@kefahB - @kefah/nativescript-otp](https://img.shields.io/static/v1?label=%40kefahB&message=%40kefah%2Fnativescript-otp&color=blue&logo=github)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md "Go to GitHub repo")
+[![stars - @kefah/nativescript-otp](https://img.shields.io/github/stars/kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md)
+[![dependency - @kefah/nativescript-otp](https://img.shields.io/badge/npm-1.0.2-green)](https://www.npmjs.com/package/@kefah/nativescript-otp "Go to NPM")
 
 
 _Repo metadata_
-
-
-[![GitHub tag](https://img.shields.io/github/tag/kefahB/@kefah/nativescript-otp?include_prereleases=&sort=semver&color=blue)](https://github.com/kefahB/kefah-plugins/blob/main/packages/nativescript-otp/README.md/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![issues - @kefah/nativescript-otp](https://img.shields.io/github/issues/@kefahB/@kefah/nativescript-otp)](https://github.com/kefahB/kefah-plugins/issues)
+[![issues - @kefah/nativescript-otp](https://img.shields.io/badge/issues-0-green)](https://github.com/kefahB/plugins/issues)
 
 ### A Nativescript plugin to auto fill the One Time Code `OTP` for `IOS` and `Android`
 
@@ -21,13 +17,30 @@ _Repo metadata_
 
 <div align="center">
 
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](/docs/ "Go to project documentation")
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md  "Go to project documentation")
 
 </div>
 
+## Table of contents
+
+- [Install](#install)
+- [Limitations](#limitations)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Best Practice](#some-best-practice-in-order-to-successfully-receive-the-sms)
+- [API](#api)
+- [Generate Android hash code](#generate-android-hash-code)
+- [How to test](#how-to-test)
+- [License](#license)
+
+## Install
 
 ```ts
 ns plugin add @kefah/nativescript-otp
+```
+OR
+```ts
+npm i @kefah/nativescript-otp
 ```
 
 ## Limitations
@@ -134,7 +147,7 @@ export class DemoSharedOtp extends DemoSharedBase {
 
 
 
-## Generate Android hash code
+## Generate Android hash code[gahc]
 
 ```ts
 package=_yourp_package_name_
@@ -149,6 +162,17 @@ keytool -exportcert -alias $alias -keystore $keystore -storepass $keystorepass |
 keytool -exportcert -alias androiddebugkey -keystore debug.keystore -storepass android | xxd -p | tr -d "[:space:]" | echo -n $package `cat` | openssl sha256 | tr -d "[:space:]-" | xxd -r -p | base64 | cut -c1-11
 ```
 
+## How to test
+
+### IOS
+Unfortunatly an `IOS` You need to test the `SMS` on a real device, apple doesn't allow to simulate a incomming sms on the simulator.
+
+### Android
+It is very easy, please see the image below
+
+<img width="371" alt="Capture d’écran 2022-12-28 à 12 45 52" src="https://user-images.githubusercontent.com/18148534/209786200-fb9bb4d8-9bcc-43d0-a1b4-c49f8478993b.png">
+
+<img width="400" alt="Capture d’écran 2022-12-28 à 12 48 26" src="https://user-images.githubusercontent.com/18148534/209786220-e022c321-7111-489b-a256-3be2b28d0e91.png">
 
 ## License
 
