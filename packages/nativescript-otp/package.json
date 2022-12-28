@@ -1,6 +1,6 @@
 {
     "name": "@kefah/nativescript-otp",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "A Nativescript plugin to auto fill the One Time Code OTP for IOS and Android",
     "main": "index",
     "typings": "index.d.ts",
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/NativeScript/plugins.git"
+        "url": "https://github.com/kefahB/plugins.git"
     },
     "keywords": [
         "Google Maps",
@@ -33,10 +33,10 @@
         "email": "kefah.bader@gmail.com"
     },
     "bugs": {
-        "url": "https://github.com/NativeScript/plugins/issues"
+        "url": "https://github.com/kefahB/plugins/issues"
     },
     "license": "Apache-2.0",
-    "homepage": "https://github.com/NativeScript/plugins",
+    "homepage": "https://github.com/kefahB/plugins",
     "readmeFilename": "README.md",
     "bootstrapper": "@nativescript/plugin-seed"
 }

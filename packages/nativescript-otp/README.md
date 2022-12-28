@@ -8,6 +8,7 @@ _Social buttons_
 
 
 _Repo metadata_
+
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![issues - @kefah/nativescript-otp](https://img.shields.io/badge/issues-0-green)](https://github.com/kefahB/plugins/issues)
 
@@ -59,6 +60,15 @@ JS: packageName: org.nativescript.plugindemo Hash: I+D7XdR0yWS
 - [Google Docs](https://developers.google.com/identity/sms-retriever/verify#computing_your_apps_hash_string)
 - Here is a `Python` plugin to generate the hash, it work for all OS
 [android-sms-hash-generator](https://github.com/funambol/android-sms-hash-generator)
+
+## Before start
+> An OTP in most case it is a `integer` values, please avoir using alphabet characters if possible.
+
+> For some reason on IOS the OTP dectection not workin some time with a default keyboard type, if you experiencing a problem try to set the keyboard type to `integer`
+
+```xml
+<notp:NativescriptOtp keyboardType="integer" hint="{{ L('activation_code') }}" text="{{ code }}" autocorrect="false" class="otp"/>
+```
 
 ## Some best practice in order to successfully receive the SMS
 - Try to use thoes keywords into your sms `Code` `Passcode` `Password` `is`
@@ -165,7 +175,7 @@ keytool -exportcert -alias androiddebugkey -keystore debug.keystore -storepass a
 ## How to test
 
 ### IOS
-Unfortunatly an `IOS` You need to test the `SMS` on a real device, apple doesn't allow to simulate a incomming sms on the simulator.
+Unfortunately an `IOS` You need to test the `SMS` on a real device, apple doesn't allow to simulate a incomming sms on the simulator.
 
 ### Android
 It is very easy, please see the image below
