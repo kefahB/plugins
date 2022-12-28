@@ -52,6 +52,8 @@ The only setup is for `Android` that need a hash code to be append to the sms, t
 
 Get you development hash code by calling `getAppSignatures()` this will log the flowing into the console:
 
+> PS: please use `getAppSignatures()` to get the hash code then comment it, it is not needed any more
+
 ```ts
 JS: packageName: org.nativescript.plugindemo Hash: I+D7XdR0yWS
 ```
