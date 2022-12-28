@@ -62,9 +62,10 @@ JS: packageName: org.nativescript.plugindemo Hash: I+D7XdR0yWS
 [android-sms-hash-generator](https://github.com/funambol/android-sms-hash-generator)
 
 ## Before start
-> An OTP in most case it is a `integer` values, please avoir using alphabet characters if possible.
+> An OTP in most case it is a `integers` values, please avoid using alphabet characters if possible.
 
 > For some reason on IOS the OTP dectection not workin some time with a default keyboard type, if you experiencing a problem try to set the keyboard type to `integer`
+
 
 ```xml
 <notp:NativescriptOtp keyboardType="integer" hint="{{ L('activation_code') }}" text="{{ code }}" autocorrect="false" class="otp"/>
