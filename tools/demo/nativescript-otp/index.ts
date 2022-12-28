@@ -23,6 +23,6 @@ export class DemoSharedOtp extends DemoSharedBase {
     }
 
     testIt() {
-        console.log('test nativescript-otp!');
+        console.log('test nativescript-otp!', this.get("otp"));
     }
 }

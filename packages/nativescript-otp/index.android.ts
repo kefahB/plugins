@@ -1,4 +1,5 @@
 import { AndroidApplication, Application, EventData, fromObject, TextField, TextView, Utils } from '@nativescript/core';
+import { textProperty } from '@nativescript/core/ui/text-base';
 import { NativescriptOtpCommon } from './common';
 
 const SmsRetriever = com.google.android.gms.auth.api.phone.SmsRetriever;
@@ -101,7 +102,14 @@ export class NativescriptOtp extends NativescriptOtpCommon {
     createNativeView() {
         // Create new instance of android.widget.Button.
         const textField = new android.widget.EditText(this._context);
-
+        textField.addTextChangedListener(new android.text.TextWatcher({
+                beforeTextChanged: (charSequence, i, i1, i2)  => {},
+                onTextChanged: (chr, i, i1, i2) => {
+                    textProperty.nativeValueChange(this, chr)
+                },
+                afterTextChanged: (editable) => {}
+            }
+        ));
         return textField;
     }
 

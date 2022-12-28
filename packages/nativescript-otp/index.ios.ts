@@ -1,4 +1,5 @@
-import { Application, Device, EventData, fromObject } from '@nativescript/core';
+import { Application, Device, EventData, fromObject, TextField } from '@nativescript/core';
+import { textProperty } from '@nativescript/core/ui/text-base';
 import { NativescriptOtpCommon, OTPResultInterface } from './common';
 
 @NativeClass()
@@ -28,7 +29,8 @@ class UITextFieldDelegateImpl extends NSObject implements UITextFieldDelegate {
                 })
             });
         }
-
+        const owner = this._owner.deref()
+        textProperty.nativeValueChange(owner, newText.trim());
         return true;
     }
 }
@@ -59,6 +61,7 @@ export class NativescriptOtp extends NativescriptOtpCommon {
     }
 
     createNativeView() {
+        //let v = super.createNativeView();
         console.error("createNativeView");
         // Create new instance of android.widget.Button.
         const textField = UITextField.new();

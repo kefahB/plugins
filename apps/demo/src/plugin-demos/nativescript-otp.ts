@@ -7,6 +7,7 @@ export function navigatingTo(args: EventData) {
 	page.bindingContext = new DemoModel();
 }
 
+
 export class DemoModel extends DemoSharedOtp {
 	
     constructor() {

@@ -1,6 +1,6 @@
 {
     "name": "@kefah/nativescript-otp",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A Nativescript plugin to auto fill the One Time Code OTP for IOS and Android",
     "main": "index",
     "typings": "index.d.ts",

@@ -1,4 +1,4 @@
-import { TextField } from '@nativescript/core';
+import { addWeakEventListener, EventData, Observable, ObservableArray, Property, removeWeakEventListener, TextField } from '@nativescript/core';
 import { OTPCallbackInterface, OTPResultInterface } from './index';
 
 export * from "./index";
@@ -27,5 +27,4 @@ export class NativescriptOtpCommon extends TextField {
         let reg = new RegExp(expression);
         return reg.exec(msg)[0];
     }
-
 }
