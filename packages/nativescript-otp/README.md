@@ -147,7 +147,7 @@ export class DemoSharedOtp extends DemoSharedBase {
 
 
 
-## Generate Android hash code[gahc]
+## Generate Android hash code
 
 ```ts
 package=_yourp_package_name_
