@@ -3,7 +3,7 @@
 _Social buttons_
 
 [![@kefahB - @kefah/nativescript-otp](https://img.shields.io/static/v1?label=%40kefahB&message=%40kefah%2Fnativescript-otp&color=blue&logo=github)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md "Go to GitHub repo")
-[![stars - @kefah/nativescript-otp](https://img.shields.io/github/stars/kefahB/@kefah/nativescript-otp?style=social)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md)
+[![stars - @kefah/nativescript-otp](https://img.shields.io/badge/Strars-1-yellow)](https://github.com/kefahB/plugins/blob/main/packages/nativescript-otp/README.md)
 [![dependency - @kefah/nativescript-otp](https://img.shields.io/badge/npm-1.0.2-green)](https://www.npmjs.com/package/@kefah/nativescript-otp "Go to NPM")
 
 
