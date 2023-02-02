@@ -20,6 +20,7 @@ export class NativescriptOtpCommon extends TextField {
     }
 
     public parseMsg(msg: string, regex?: RegExp|string): string|null {
+        if(!msg) return null;
         let expression: RegExp|string = /(\d+\w)|(\w+\d)/m;
         if(regex) {
             expression = regex;
