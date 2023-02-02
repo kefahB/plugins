@@ -52,7 +52,7 @@ export class NativescriptOtp extends NativescriptOtpCommon {
     public static NUM_HASHED_BYTES: number = 9;
     public static NUM_BASE64_CHAR: number = 11;
 
-    private receiver = new MySMSBroadcastReceiver();
+    private receiver: MySMSBroadcastReceiver = null;
 
     constructor() {
         super();
@@ -73,7 +73,6 @@ export class NativescriptOtp extends NativescriptOtpCommon {
             }
         })
     }
-
 
     onLoaded(): void {
         super.onLoaded();
@@ -99,7 +98,7 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         }));
     }
 
-    createNativeView() {
+    /*createNativeView() {
         // Create new instance of android.widget.Button.
         const textField = new android.widget.EditText(this._context);
         textField.addTextChangedListener(new android.text.TextWatcher({
@@ -111,10 +110,18 @@ export class NativescriptOtp extends NativescriptOtpCommon {
             }
         ));
         return textField;
-    }
+    }*/
 
     initNativeView() {
-        // optional
+        this.receiver = new MySMSBroadcastReceiver();
+        this.nativeView.addTextChangedListener(new android.text.TextWatcher({
+                beforeTextChanged: (charSequence, i, i1, i2)  => {},
+                onTextChanged: (chr, i, i1, i2) => {
+                    textProperty.nativeValueChange(this, chr)
+                },
+                afterTextChanged: (editable) => {}
+            }
+        ));
     }
 
     disposeNativeView() {

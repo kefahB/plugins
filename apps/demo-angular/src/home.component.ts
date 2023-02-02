@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   demos = [
 	{
-		name: 'otp'
+		name: 'nativescript-otp'
 	}
 ];
 }
