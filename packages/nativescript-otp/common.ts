@@ -1,5 +1,5 @@
-import { addWeakEventListener, EventData, Observable, ObservableArray, Property, removeWeakEventListener, TextField } from '@nativescript/core';
-import { OTPCallbackInterface, OTPResultInterface } from './index';
+import { TextField } from '@nativescript/core';
+import { OTPResultInterface } from './index';
 
 export * from "./index";
 

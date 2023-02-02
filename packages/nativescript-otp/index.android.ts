@@ -1,9 +1,20 @@
-import { AndroidApplication, Application, EventData, fromObject, TextField, TextView, Utils } from '@nativescript/core';
-import { textProperty } from '@nativescript/core/ui/text-base';
+import { AndroidApplication, Application, EventData, fromObject, Property, TextField, TextView, Utils } from '@nativescript/core';
 import { NativescriptOtpCommon } from './common';
 
 const SmsRetriever = com.google.android.gms.auth.api.phone.SmsRetriever;
 const phone = com.google.android.gms.auth.api.phone;
+
+
+export const textProperty = new Property<NativescriptOtp, string>({
+	name: 'text',
+	defaultValue: '',
+	valueChanged: onTextPropertyChanged,
+});
+
+function onTextPropertyChanged(target: NativescriptOtp, oldValue, newValue) {
+	target._onTextPropertyChanged(target, oldValue, newValue);
+}
+
 
 @NativeClass()
 export class MySMSBroadcastReceiver extends android.content.BroadcastReceiver {
@@ -74,6 +85,18 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         })
     }
 
+        // @ts-ignore
+    get android(): android.widget.EditText {
+        return this.nativeView;
+    }
+
+    _onTextPropertyChanged(target: NativescriptOtp, oldValue, newValue) {
+		if (!this.nativeView) {
+			return;
+		}
+		textProperty.nativeValueChange(this, newValue);
+	}
+
     onLoaded(): void {
         super.onLoaded();
 
@@ -98,12 +121,19 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         }));
     }
 
+
     initNativeView() {
+        const that = new WeakRef(this);
         this.receiver = new MySMSBroadcastReceiver();
-        this.nativeView.addTextChangedListener(new android.text.TextWatcher({
+        this.android.addTextChangedListener(new android.text.TextWatcher({
                 beforeTextChanged: (charSequence, i, i1, i2)  => {},
                 onTextChanged: (chr, i, i1, i2) => {
-                    textProperty.nativeValueChange(this, chr)
+                    console.error(chr, i, i1, i2);
+                    // @ts-ignore
+                    if (that.get()) {
+                        // @ts-ignore
+                        textProperty.nativeValueChange(that.get(), chr)
+                    }
                 },
                 afterTextChanged: (editable) => {}
             }
@@ -118,6 +148,16 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         super.onUnloaded();
         this.unregisterReceiver();
     }
+
+    /*[textProperty.setNative](value: string) {
+        console.error("mk,l,,k,", value);
+        
+        this.android.setText(value)
+    }*/
+
+    /*[_textProperty.setNative](value: string) {
+        (this.nativeView).setText = value;
+    }*/
 
     private async registerReceiver(): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {

@@ -5,7 +5,6 @@ export class DemoSharedOtp extends DemoSharedBase {
 
     constructor() {
         super();
-
         let otp = new NativescriptOtp();
         otp.registerForOTP((otp: OTPResultInterface) => {
             if(otp) {

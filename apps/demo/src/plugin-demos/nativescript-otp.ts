@@ -11,6 +11,5 @@ export class DemoModel extends DemoSharedOtp {
 	
     constructor() {
         super();
-
     }
 }
