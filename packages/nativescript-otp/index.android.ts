@@ -98,20 +98,6 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         }));
     }
 
-    /*createNativeView() {
-        // Create new instance of android.widget.Button.
-        const textField = new android.widget.EditText(this._context);
-        textField.addTextChangedListener(new android.text.TextWatcher({
-                beforeTextChanged: (charSequence, i, i1, i2)  => {},
-                onTextChanged: (chr, i, i1, i2) => {
-                    textProperty.nativeValueChange(this, chr)
-                },
-                afterTextChanged: (editable) => {}
-            }
-        ));
-        return textField;
-    }*/
-
     initNativeView() {
         this.receiver = new MySMSBroadcastReceiver();
         this.nativeView.addTextChangedListener(new android.text.TextWatcher({
