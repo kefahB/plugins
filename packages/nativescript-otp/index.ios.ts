@@ -1,6 +1,5 @@
-import { Application, Device, EventData, fromObject, TextField } from '@nativescript/core';
-import { textProperty } from '@nativescript/core/ui/text-base';
-import { NativescriptOtpCommon, OTPResultInterface } from './common';
+import { Application, Device, EventData, fromObject } from '@nativescript/core';
+import { NativescriptOtpCommon, textProperty } from './common';
 
 @NativeClass()
 class UITextFieldDelegateImpl extends NSObject implements UITextFieldDelegate {
@@ -72,10 +71,7 @@ export class NativescriptOtp extends NativescriptOtpCommon {
         this.nativeView.delegate = this._delegate;
 
         if(Device.sdkVersion >= "12") {
-            console.error("Device.sdkVersion", Device.sdkVersion);
-            
             this.nativeView.textContentType = "oneTimeCode";
-            //textField.keyboardType = UIKeyboardType.NumberPad;
         }
         else {
             console.error("OTP Feature are available since IOS 12 and higher");
@@ -83,6 +79,17 @@ export class NativescriptOtp extends NativescriptOtpCommon {
 
         // In order to get OTP the keyboard should be open, otherwise it doesn't
         this.nativeView.becomeFirstResponder()
+    }
+
+    [textProperty.getDefault]() {
+        this.text;
+    }
+    
+    [textProperty.setNative](value) {
+        console.error("textProperty.setNative", value);
+        console.error(this.nativeView.text = "k");
+        
+        this.nativeView.text = value.toString();
     }
 
     disposeNativeView() {
