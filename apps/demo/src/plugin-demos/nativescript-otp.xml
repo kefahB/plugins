@@ -7,8 +7,9 @@ xmlns:notp="@kefah/nativescript-otp" navigatingTo="navigatingTo" class="page">
     <StackLayout class="p-20">
         <ScrollView class="h-full">
           <StackLayout>
-            <notp:NativescriptOtp keyboardType="integer" hint="OTP" class="otp" text="{{ otp }}"/>
+            <notp:NativescriptOtp id="otp" keyboardType="integer" hint="OTP" class="otp" text="{{otp}}"/>
             <Button text="Test otp >" tap="{{ testIt }}" class="btn btn-primary"/>
+            <Button text="GET OTP CODE BEHIND" tap="getOtp" class="btn btn-primary"/>
           </StackLayout> 
         </ScrollView>
     </StackLayout>
