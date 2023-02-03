@@ -1,12 +1,12 @@
-import { TextField } from '@nativescript/core';
-import { OTPResultInterface } from './index';
+import { CoercibleProperty, Property, PropertyChangeData, TextField } from '@nativescript/core';
+import { NativescriptOtp, OTPResultInterface } from './index';
 
 export * from "./index";
 
 export class NativescriptOtpCommon extends TextField {
-    
+
     public cb: (msg: OTPResultInterface) => void;
-    
+
     constructor() {
         super();
     }
@@ -29,3 +29,10 @@ export class NativescriptOtpCommon extends TextField {
         return reg.exec(msg)[0];
     }
 }
+
+
+export const textProperty = new Property<NativescriptOtpCommon, string>({
+	name: 'text',
+    defaultValue: null
+});
+textProperty.register(NativescriptOtpCommon);
