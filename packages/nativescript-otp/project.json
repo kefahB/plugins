@@ -1,0 +1,41 @@
+{
+  "name": "nativescript-otp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/nativescript-otp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/nativescript-otp",
+        "tsConfig": "packages/nativescript-otp/tsconfig.json",
+        "packageJson": "packages/nativescript-otp/package.json",
+        "main": "packages/nativescript-otp/index.d.ts",
+        "assets": [
+          "packages/nativescript-otp/*.md",
+          "packages/nativescript-otp/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/nativescript-otp/platforms/",
+            "output": "./platforms/"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx run nativescript-otp:build", "node tools/scripts/build-finish.ts nativescript-otp"],
+        "parallel": false
+      }
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-otp"],
+        "parallel": false
+      }
+    }
+  }
+}

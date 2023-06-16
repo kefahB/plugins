@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   demos = [
 	{
-		name: 'nativescript-otp'
+		name: 'nativescript-language-switcher'
 	}
 ];
 }

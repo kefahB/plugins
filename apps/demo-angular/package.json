@@ -2,7 +2,7 @@
   "main": "./src/main.ts",
   "dependencies": {
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
-    "@kefah/nativescript-otp": "file:../../dist/packages/nativescript-otp"
+    "@kefah/nativescript-language-switcher": "file:../../dist/packages/nativescript-language-switcher"
   },
   "devDependencies": {
     "@nativescript/android": "~8.2.2",

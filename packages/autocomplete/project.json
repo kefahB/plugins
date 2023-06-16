@@ -1,0 +1,41 @@
+{
+  "name": "autocomplete",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/autocomplete",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/autocomplete",
+        "tsConfig": "packages/autocomplete/tsconfig.json",
+        "packageJson": "packages/autocomplete/package.json",
+        "main": "packages/autocomplete/index.d.ts",
+        "assets": [
+          "packages/autocomplete/*.md",
+          "packages/autocomplete/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/autocomplete/platforms/",
+            "output": "./platforms/"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx run autocomplete:build", "node tools/scripts/build-finish.ts autocomplete"],
+        "parallel": false
+      }
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx g @nativescript/plugin-tools:focus-packages autocomplete"],
+        "parallel": false
+      }
+    }
+  }
+}

@@ -1,39 +1,44 @@
 {
-    "compilerOptions": {
-      "rootDir": ".",
-      "sourceMap": true,
-      "declaration": true,
-      "moduleResolution": "node",
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "noEmitHelpers": true,
-      "target": "esnext",
-      "module": "esnext",
-      "lib": [
-        "esnext",
-        "dom"
-      ],
-      "skipLibCheck": true,
-      "skipDefaultLibCheck": true,
-      "baseUrl": ".",
-      "plugins": [
-        {
-          "transform": "@nativescript/webpack/dist/transformers/NativeClass",
-          "type": "raw"
-        }
-      ],
-      "paths": {
-        "@demo/shared": [
-          "tools/demo/index.ts"
-        ],
-        "@kefah/*": [
-          "packages/*"
-        ]
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "transform": "@nativescript/webpack/dist/transformers/NativeClass",
+        "type": "raw"
       }
-    },
-    "exclude": [
-      "node_modules",
-      "tmp"
-    ]
-  }
-  
+    ],
+    "paths": {
+      "@demo/shared": [
+        "tools/demo/index.ts"
+      ],
+      "@kefah/*": [
+        "packages/*"
+      ],
+      "@kefah/language-switcher": [
+        "packages/language-switcher/index.d.ts"
+      ],
+      "@kefah/nativescript-language-switcher": [
+        "packages/nativescript-language-switcher/index.d.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

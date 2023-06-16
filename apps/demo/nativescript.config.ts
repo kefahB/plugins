@@ -9,3 +9,12 @@ export default {
   },
   appPath: 'src',
 } as NativeScriptConfig;
+/**
+ * 
+  hooks: [
+    {
+      //type: 'before-prepare',
+      //script: '../../tools/scripts/before-prepare.js',
+    }
+  ],
+ */

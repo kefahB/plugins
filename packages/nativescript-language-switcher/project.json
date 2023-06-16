@@ -1,0 +1,65 @@
+{
+  "name": "nativescript-language-switcher",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/nativescript-language-switcher",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/nativescript-language-switcher",
+        "tsConfig": "packages/nativescript-language-switcher/tsconfig.json",
+        "packageJson": "packages/nativescript-language-switcher/package.json",
+        "main": "packages/nativescript-language-switcher/index.d.ts",
+        "assets": [
+          "packages/nativescript-language-switcher/*.md",
+          "packages/nativescript-language-switcher/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/nativescript-language-switcher/platforms/",
+            "output": "./platforms/"
+          }
+        ],
+        "dependsOn": [
+          {
+            "target": "build.all",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["node tools/scripts/build-finish.ts nativescript-language-switcher"],
+        "parallel": false
+      },
+      "outputs": ["dist/packages/nativescript-language-switcher"],
+      "dependsOn": [
+        {
+          "target": "build.all",
+          "projects": "dependencies"
+        },
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-language-switcher"],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["packages/nativescript-language-switcher/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

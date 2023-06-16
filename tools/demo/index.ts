@@ -1,2 +1,2 @@
 export * from './utils';
-export * from './nativescript-otp';
+export * from './nativescript-language-switcher';

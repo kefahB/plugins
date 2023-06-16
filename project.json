@@ -1,0 +1,24 @@
+{
+  "name": "all",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["dist/packages"],
+      "options": {
+        "commands": ["nx run nativescript-uuid:build.all", "nx run nativescript-google-maps:build.all", "nx run autocomplete:build.all", "nx run switcher:build.all", "nx run nativescript-otp:build.all"],
+        "parallel": false
+      }
+    },
+    "focus": {
+      "outputs": ["dist/packages"],
+      "options": {
+        "commands": ["nx g @nativescript/plugin-tools:focus-packages"],
+        "parallel": false
+      },
+      "executor": "@nrwl/workspace:run-commands"
+    }
+  },
+  "sourceRoot": ""
+}

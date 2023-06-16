@@ -4,9 +4,9 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
-    "@kefah/nativescript-otp": "file:../../packages/nativescript-otp",
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
-    "nativescript-permissions": "^1.3.12"
+    "nativescript-permissions": "^1.3.12",
+    "@kefah/nativescript-language-switcher": "file:../../packages/nativescript-language-switcher"
   },
   "devDependencies": {
     "@nativescript/android": "8.4.0",

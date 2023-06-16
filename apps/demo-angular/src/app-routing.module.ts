@@ -7,7 +7,7 @@ import { HomeComponent } from './home.component';
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
    { path: 'home', component: HomeComponent },
-	{ path: 'nativescript-otp', loadChildren: () => import('./plugin-demos/nativescript-otp.module').then(m => m.NativescriptOtpModule) }
+	{ path: 'nativescript-language-switcher', loadChildren: () => import('./plugin-demos/nativescript-language-switcher.module').then(m => m.NativescriptLanguageSwitcherModule) }
 ];
 
 @NgModule({

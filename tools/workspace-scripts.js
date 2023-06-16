@@ -98,6 +98,20 @@ module.exports = {
 					description: '@kefah/nativescript-otp: Build',
 				},
 			},
+			// @kefah/language-switcher
+			'language-switcher': {
+				build: {
+					script: 'nx run language-switcher:build.all',
+					description: '@kefah/language-switcher: Build',
+				},
+			},
+			// @kefah/nativescript-language-switcher
+			'nativescript-language-switcher': {
+				build: {
+					script: 'nx run nativescript-language-switcher:build.all',
+					description: '@kefah/nativescript-language-switcher: Build',
+				},
+			},
 			'build-all': {
         script: 'nx run all:build',
         description: 'Build all packages',
@@ -127,6 +141,14 @@ module.exports = {
 			'nativescript-otp': {
 				script: 'nx run nativescript-otp:focus',
 				description: 'Focus on @kefah/nativescript-otp',
+			},
+			'language-switcher': {
+				script: 'nx run language-switcher:focus',
+				description: 'Focus on @kefah/language-switcher',
+			},
+			'nativescript-language-switcher': {
+				script: 'nx run nativescript-language-switcher:focus',
+				description: 'Focus on @kefah/nativescript-language-switcher',
 			},
 			reset: {
         script: 'nx run all:focus',
