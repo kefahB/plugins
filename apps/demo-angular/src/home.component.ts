@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   demos = [
 	{
+		name: 'autocomplete'
+	},
+	{
+		name: 'nativescript-google-maps'
+	},
+	{
 		name: 'nativescript-language-switcher'
+	},
+	{
+		name: 'nativescript-otp'
+	},
+	{
+		name: 'nativescript-uuid'
 	}
 ];
 }

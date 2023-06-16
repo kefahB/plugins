@@ -2,7 +2,11 @@
   "main": "./src/main.ts",
   "dependencies": {
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
-    "@kefah/nativescript-language-switcher": "file:../../dist/packages/nativescript-language-switcher"
+    "@kefah/nativescript-language-switcher": "file:../../dist/packages/nativescript-language-switcher",
+    "@kefah/autocomplete": "file:../../dist/packages/autocomplete",
+    "@kefah/nativescript-google-maps": "file:../../dist/packages/nativescript-google-maps",
+    "@kefah/nativescript-otp": "file:../../dist/packages/nativescript-otp",
+    "@kefah/nativescript-uuid": "file:../../dist/packages/nativescript-uuid"
   },
   "devDependencies": {
     "@nativescript/android": "~8.2.2",

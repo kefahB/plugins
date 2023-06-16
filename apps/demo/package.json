@@ -6,7 +6,11 @@
   "dependencies": {
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
     "nativescript-permissions": "^1.3.12",
-    "@kefah/nativescript-language-switcher": "file:../../packages/nativescript-language-switcher"
+    "@kefah/nativescript-language-switcher": "file:../../packages/nativescript-language-switcher",
+    "@kefah/autocomplete": "file:../../packages/autocomplete",
+    "@kefah/nativescript-google-maps": "file:../../packages/nativescript-google-maps",
+    "@kefah/nativescript-otp": "file:../../packages/nativescript-otp",
+    "@kefah/nativescript-uuid": "file:../../packages/nativescript-uuid"
   },
   "devDependencies": {
     "@nativescript/android": "8.4.0",

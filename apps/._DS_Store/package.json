@@ -2,6 +2,10 @@
   "dependencies": {
     "@kefah/switcher": "file:../../packages/switcher",
     "@kefah/nativescript-language-switcher": "file:../../packages/nativescript-language-switcher",
-    "@kefah/language-switcher": "file:../../packages/language-switcher"
+    "@kefah/language-switcher": "file:../../packages/language-switcher",
+    "@kefah/autocomplete": "file:../../packages/autocomplete",
+    "@kefah/nativescript-google-maps": "file:../../packages/nativescript-google-maps",
+    "@kefah/nativescript-otp": "file:../../packages/nativescript-otp",
+    "@kefah/nativescript-uuid": "file:../../packages/nativescript-uuid"
   }
 }
